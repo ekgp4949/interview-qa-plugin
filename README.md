@@ -7,7 +7,7 @@
 ## 설치
 
 ```bash
-/plugin install dhk/interview-qa-plugin
+/plugin install ekgp4949/interview-qa-plugin
 ```
 
 ## 사용법
