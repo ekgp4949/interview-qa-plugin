@@ -1,0 +1,18 @@
+{
+  "name": "interview-qa",
+  "version": "1.0.0",
+  "description": "기술 면접용 QA 자동 생성 플러그인. 프로젝트 코드를 분석하여 CS 기초, 아키텍처, 보안, 성능 관련 면접 질문과 답변을 자동으로 생성합니다.",
+  "author": {
+    "name": "dhk",
+    "url": "https://github.com/dhk"
+  },
+  "repository": "https://github.com/dhk/interview-qa-plugin",
+  "keywords": [
+    "interview",
+    "qa",
+    "technical-interview",
+    "code-analysis",
+    "korean"
+  ],
+  "license": "MIT"
+}
