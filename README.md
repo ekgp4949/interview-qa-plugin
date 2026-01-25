@@ -10,21 +10,76 @@
 /plugin install ekgp4949/interview-qa-plugin
 ```
 
-## 사용법
+## 명령어
+
+### `/interview-qa` - QA 자동 생성
+
+세션 내용이나 프로젝트를 분석하여 기술 면접용 QA를 생성합니다.
+
+#### 기본 사용법
 
 ```bash
-# 현재 세션 전체 분석
-/interview-qa
-
-# 특정 주제 지정
-/interview-qa "React hooks"
+/interview-qa                    # 현재 세션 전체 분석
+/interview-qa "React hooks"      # 특정 주제만 분석
 /interview-qa "인증 구현"
+```
 
-# 프로젝트 전체 구조 분석
+#### 옵션
+
+| 옵션 | 설명 | 예시 |
+|------|------|------|
+| (없음) | 현재 세션의 모든 대화와 작업 분석 | `/interview-qa` |
+| `"주제"` | 지정한 주제와 관련된 내용만 분석 | `/interview-qa "상태 관리"` |
+| `--last` | 가장 최근 작업만 분석 | `/interview-qa --last` |
+| `--file` | 특정 파일과 관련된 내용 분석 | `/interview-qa --file src/auth.ts` |
+| `--project` | 프로젝트 전체 구조 분석 | `/interview-qa --project` |
+| `--project <경로>` | 특정 경로만 분석 | `/interview-qa --project src/` |
+
+#### 사용 예시
+
+```bash
+# 방금 구현한 기능에 대한 QA 생성
+/interview-qa --last
+
+# 인증 모듈 파일 기반 QA 생성
+/interview-qa --file src/services/auth.ts
+
+# 프로젝트 전체 아키텍처 QA 생성
 /interview-qa --project
 
-# 특정 파일 관련
-/interview-qa --file src/auth.ts
+# src 폴더만 분석하여 QA 생성
+/interview-qa --project src/
+```
+
+---
+
+### `/interview-prep` - 면접 도메인 지식 로드
+
+면접 준비에 필요한 핵심 개념과 답변 전략을 로드합니다.
+
+#### 사용법
+
+```bash
+/interview-prep
+```
+
+#### 포함 내용
+
+- **질문 유형별 답변 구조**: 개념 설명형, 비교형, 문제 해결형, 경험 기반형, 설계형
+- **카테고리별 핵심 개념**: CS 기초, 아키텍처(SOLID, 디자인 패턴), 보안(OWASP), 성능
+- **난이도별 예상 질문**: 주니어/미들/시니어
+- **면접 팁**: DO와 DON'T
+
+#### 활용 예시
+
+```bash
+# 면접 준비 지식 로드 후 특정 주제 질문
+/interview-prep
+> "이벤트 루프에 대해 면접에서 어떻게 설명하면 좋을까요?"
+
+# STAR 기법으로 경험 정리
+/interview-prep
+> "OAuth 구현 경험을 STAR 기법으로 정리해주세요"
 ```
 
 ## 생성되는 QA 카테고리
