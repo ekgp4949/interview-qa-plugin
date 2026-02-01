@@ -15,10 +15,7 @@
       },
       "repository": "https://github.com/ekgp4949/interview-qa-plugin",
       "license": "MIT",
-      "keywords": ["interview", "qa", "technical-interview", "code-analysis", "korean"],
-      "commands": "./commands/",
-      "agents": "./agents/",
-      "skills": "./skills/"
+      "keywords": ["interview", "qa", "technical-interview", "code-analysis", "korean"]
     }
   ]
 }
