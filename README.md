@@ -7,7 +7,7 @@
 ## 설치
 
 ```bash
-/plugin install ekgp4949/interview-qa-plugin
+/plugin install interview-qa@ekgp4949
 ```
 
 ## 명령어
